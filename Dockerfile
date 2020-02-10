@@ -2,6 +2,7 @@ FROM golang:1.14-rc
 COPY server/go/src/main /go/src/main
 RUN go install main
 
+
 FROM alpine:3.11
 COPY --from=0 /go/bin/main .
 COPY api /public/api
