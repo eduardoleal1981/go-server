@@ -52,7 +52,6 @@ func tServeAPI(w http.ResponseWriter, r *http.Request) {
 	// Connection
 	w.Header().Set("Transfer-Encoding", "gzip")
 	w.Header().Set("Cache-Control", "no-cache")
-	w.Header().Set("Host", "noluar.com")
 	// Message
 	w.Header().Set("Content-Type", "text/javascript; charset=utf-8")
 	w.Header().Set("Content-Language", "pt-br")
@@ -66,7 +65,6 @@ func tServeJs(w http.ResponseWriter, r *http.Request) {
 	// Connection
 	w.Header().Set("Transfer-Encoding", "gzip")
 	w.Header().Set("Cache-Control", "no-cache")
-	w.Header().Set("Host", "noluar.com")
 	// Message
 	w.Header().Set("Content-Type", "text/javascript; charset=utf-8")
 	w.Header().Set("Content-Language", "pt-br")
@@ -80,7 +78,6 @@ func tServeCss(w http.ResponseWriter, r *http.Request) {
 	// Connection
 	w.Header().Set("Transfer-Encoding", "gzip")
 	w.Header().Set("Cache-Control", "no-cache")
-	w.Header().Set("Host", "noluar.com")
 	// Message
 	w.Header().Set("Content-Type", "text/css; charset=utf-8")
 	// To be handled by webapp
@@ -93,7 +90,6 @@ func tServeSvg(w http.ResponseWriter, r *http.Request) {
 	// Connection
 	w.Header().Set("Transfer-Encoding", "gzip")
 	w.Header().Set("Cache-Control", "no-cache")
-	w.Header().Set("Host", "noluar.com")
 	// Message
 	w.Header().Set("Content-Type", "image/svg+xml; charset=utf-8")
 	w.Header().Set("Content-Language", "pt-br")
@@ -111,7 +107,6 @@ func tServeHtml(w http.ResponseWriter, r *http.Request) {
 	// Connection
 	w.Header().Set("Transfer-Encoding", "gzip") //Chrome OK
 	w.Header().Set("Cache-Control", "no-cache") //Chrome OK
-	w.Header().Set("Host", "noluar.com")        //Chrome OK
 	w.Header().Set("Date", time.Now().Format(time.UnixDate))
 	// Message
 	w.Header().Set("Content-Type", "text/html; charset=utf-8") //Chrome OK
@@ -123,8 +118,6 @@ func tServeHtml(w http.ResponseWriter, r *http.Request) {
 }
 
 func tServeIco(w http.ResponseWriter, r *http.Request) {
-	// Connection
-	w.Header().Set("Host", "noluar.com")
 	// Message
 	w.Header().Set("Content-Type", "image/x-icon")
 	// To be handled by webapp
@@ -133,8 +126,6 @@ func tServeIco(w http.ResponseWriter, r *http.Request) {
 }
 
 func tServeJpeg(w http.ResponseWriter, r *http.Request) {
-	// Connection
-	w.Header().Set("Host", "noluar.com")
 	// Message
 	w.Header().Set("Content-Type", "image/jpeg")
 	// To be handled by webapp
@@ -144,8 +135,6 @@ func tServeJpeg(w http.ResponseWriter, r *http.Request) {
 }
 
 func tServePng(w http.ResponseWriter, r *http.Request) {
-	// Connection
-	w.Header().Set("Host", "noluar.com")
 	// Message
 	w.Header().Set("Content-Type", "image/png")
 	// To be handled by webapp
@@ -155,8 +144,6 @@ func tServePng(w http.ResponseWriter, r *http.Request) {
 }
 
 func tServePdf(w http.ResponseWriter, r *http.Request) {
-	// Connection
-	w.Header().Set("Host", "noluar.com")
 	// Message
 	w.Header().Set("Content-Type", "/pdf")
 	// To be handled by webapp

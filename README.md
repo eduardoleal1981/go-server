@@ -1,70 +1,20 @@
-# noluar.com
+# go-server
 
-#### Funcionalidades do site:
-- Apresentação do serviço móvel de lanches
-- Apresentação do cardápio
-- Apresentação das receitas
-- Apresentação dos contatos
-- Venda de lanches com entrega
-
-#### Estrutura HTML:
+#### Funcionalidades - estrutura HTML:
 - Seção com toda a tela (fundo)
   - id="map"
   - Google Maps no centro
-  - Indicação do local onde se vende a comida, com imagem vetorial
   - 3 menus incorporados (apresentação na superfície superior) com tratamento de cor e de sombreado
 - Menu superior fixo:
-  - Logomarca "No Luar"
-  - "Pedido com entrega"
-  - "Acompanhe a entrega"
-- Menu Lateral fixo:
-  - Cardápio
-    - Churrasquinho de salsicha, com temperos e farofa
-    - Frutos do mar, com temperos:
-      - Camarão
-      - Casquinha de Siri
-    - Comida Baiana 
-      - Porção de vatapá
-      - Acarajé pequeno
-      - Bebidas
-      - Sucos (poupa da fruta):
-        - caju
-        - maracujá
-        - kiwi
-        - umbu
-        - lima
-        - morango
-      - Refrigerantes
-        - Cerveja
-        - Caipirinha de limão
-        - Caipirinhas (com poupa da fruta):
-        - caju 
-        - maracujá
-        - kiwi
-        - Umbu
-        - lima
-        - morango
+  - Logomarca
+  - "Botão de Menu 1"
+  - "Botão de Menu 2"
+- Menu Lateral esquerdo:
+  - Tópicos e subtópicos
 - Menu lateral direito:
-  - Vídeos de culinária (apresentação da higiene e dos produtos usados para se cozinhar este cardápio)
+  - Vídeos
 - Menu inferior:
   - Contato: Nomes e WhatsApp
-
-#### Imagens:
-- cardapioCarne.png
-  - fonte: https://snipstock.com/image/png-images-pngs-barbecue-barbecues-bbq-bbqs-128-png-34957
-  - Formato: 128 PNG
-  - Dimensões: 576px x 406
-  - Alpha Channel: YES
-  - Color Space: RGB
-- logomarcanoluar.svg
-  - Design SVG em construção ...
-  - Formato SVG: xmlns="http://www.w3.org/2000/svg"
-  - Filtros:
-    - feOffset
-    - feGaussianBlur
-    - feColorMatrix
-    - feMerge
-      - feMergeNode
 
 ```  
 The W3C DOM standard is separated into 3 different parts:

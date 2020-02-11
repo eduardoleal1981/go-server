@@ -20,7 +20,7 @@ html, body {
     background-color:red;
 }
 
-#logomarcaNoLuar{
+#logomarca{
     background-color: green;
     border: none;
     color: white;
@@ -30,7 +30,7 @@ html, body {
     cursor: pointer;
 }
 
-#buttonPedidoEntrega{
+#buttonMenuSuperior1{
     background-color: #555555;
     border: none;
     color: white;
@@ -43,7 +43,7 @@ html, body {
     cursor: pointer;
 }
 
-#buttonAcompanhamentoEntrega{
+#buttonMenuSuperior2{
     background-color: #555555;
     border: none;
     color: white;
@@ -60,6 +60,6 @@ html, body {
     background-color: yellow;
 }
 
-#imagemComidaNoMapa{
+#imagemNoMapa{
     background-color: purple;
 }
