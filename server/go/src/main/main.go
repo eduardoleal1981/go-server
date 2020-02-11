@@ -73,7 +73,7 @@ func tServeJs(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve Files
-	http.ServeFile(w, r, "public/"+strings.TrimSuffix(r.Host, ":8080")+r.URL.Path)
+	http.ServeFile(w, r, "public/"+r.URL.Path)
 }
 
 func tServeCss(w http.ResponseWriter, r *http.Request) {
@@ -86,7 +86,7 @@ func tServeCss(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve Files
-	http.ServeFile(w, r, "public/"+strings.TrimSuffix(r.Host, ":8080")+r.URL.Path)
+	http.ServeFile(w, r, "public/"+r.URL.Path)
 }
 
 func tServeSvg(w http.ResponseWriter, r *http.Request) {
@@ -100,7 +100,7 @@ func tServeSvg(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve File
-	http.ServeFile(w, r, "public/svg"+r.URL.Path)
+	http.ServeFile(w, r, "public/"+r.URL.Path)
 }
 
 func tServeHtml(w http.ResponseWriter, r *http.Request) {
@@ -119,17 +119,17 @@ func tServeHtml(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve File
-	http.ServeFile(w, r, "public/"+strings.TrimSuffix(r.Host, ":8080")+"/index.html")
+	http.ServeFile(w, r, "public/index.html")
 }
 
 func tServeIco(w http.ResponseWriter, r *http.Request) {
 	// Connection
-	w.Header().Set("Host", "tcarvi.com")
+	w.Header().Set("Host", "noluar.com")
 	// Message
 	w.Header().Set("Content-Type", "image/x-icon")
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
-	http.ServeFile(w, r, "public"+strings.TrimSuffix(r.Host, ":8080")+r.URL.Path)
+	http.ServeFile(w, r, "public/img/"+r.URL.Path)
 }
 
 func tServeJpeg(w http.ResponseWriter, r *http.Request) {
@@ -140,7 +140,7 @@ func tServeJpeg(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve Files
-	http.ServeFile(w, r, "public/jpeg"+r.URL.Path)
+	http.ServeFile(w, r, "public/"+r.URL.Path)
 }
 
 func tServePng(w http.ResponseWriter, r *http.Request) {
@@ -151,7 +151,7 @@ func tServePng(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve Files
-	http.ServeFile(w, r, "public/png"+r.URL.Path)
+	http.ServeFile(w, r, "public/"+r.URL.Path)
 }
 
 func tServePdf(w http.ResponseWriter, r *http.Request) {
@@ -162,7 +162,7 @@ func tServePdf(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve Files
-	http.ServeFile(w, r, "public/pdf"+r.URL.Path)
+	http.ServeFile(w, r, "public/docs/"+r.URL.Path)
 }
 
 // TODO: func database() string

@@ -2,37 +2,25 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="pragma"   content="no-cache" />
-    <meta http-equiv="expires" content="0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Luar - Em construção</title>
-    <!-- General Design -->
-    <link rel="stylesheet" type="text/css" href="css/normalize/normalize.css" />
-    <!-- Design related only to this app -->
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <!-- General API -->
-    <script type="text/javascript" src="api/api.js"></script>
-    <!-- Scripts related only to this app -->
-    <script type="text/javascript" src="js/main.js"></script>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+  <title>No Luar - Em construção</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="pragma"   content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Padronização para design de browsers -->
+  <link rel="stylesheet" type="text/css" href="css/normalize/normalize.css" />
+  <!-- Design da aplicação -->
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <!-- API TCARVI -->
+  <script type="text/javascript" src="js/api/api.js"></script>
+  <!-- Scripts da aplicação -->
+  <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
-  <div id="map"></div>
+
+  <section id="map"></section>
   <script>
     var map;
     function initMap() {
@@ -45,12 +33,15 @@
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYjZ9dtDUP9tx-MgX9Rp_jR9LcApetM-k&callback=initMap"
   async defer></script>
-  <p>Site em construção ...</p> 
+
+  <p>Site em construção ...</p>
+
   <section id="menuSuperior">
     <img id="logomarcaNoLuar" src="svg/logomarcaNoLuar.svg">
     <button id="buttonPedidoEntrega">Pedido com entrega</button>
     <button id="buttonAcompanhamentoEntrega">Acompanhamento da entrega</button>
   </section>
+
   <section id="menuLateral">
     <ul>Cardápio
       <li>Churrasquinho de salsicha, temperada com farofa, no palito</li>
@@ -83,11 +74,13 @@
       </ul>
     </ul>
   </section>
-</section>
-  <img id="imagemJantarNoMapa" src="img/lancheJantarEmNeon.png">
-</section>
+
+  </section>
+    <img id="imagemJantarNoMapa" src="img/lancheJantarEmNeon.png">
+  </section>
+
   <section>
-    <ul>Se prefirar, pode fazer pedidos pelo WhatsApp:
+    <ul>Pedidos por WhatsApp:
       <li>Solange <a href="tel:+55-61-982936478">(61) XXXXX-XXXX</a></li>
       <li>Lucas <a href="tel:+55-61-982936478">(61) XXXXX-XXXX</a></li>
       <li>Bruna <a href="tel:+55-61-982936478">(61) XXXXX-XXXX</a></li>
@@ -95,188 +88,9 @@
       <li>Andreia <a href="tel:+55-61-982936478">(61) XXXXX-XXXX</a></li>
       <li>Adriana <a href="tel:+55-61-982936478">(61) XXXXX-XXXX</a></li>
     </ul>
-  
-  
+  </section>
+
   <img id="carne" src="img/cardapioCarne.png" alt="Cortes apetitosos de carne">
+
 </body>
 </html>
-
-<!-- 
-The W3C DOM standard is separated into 3 different parts:
-Core DOM - standard model for all document types
-XML DOM - standard model for XML documents
-HTML DOM - standard model for HTML documents 
--->
-
-<!-- 
-The HTML DOM is a standard object model and programming interface for HTML.
-It defines:
-The HTML elements as objects
-The properties of all HTML elements
-The methods to access all HTML elements
-The events for all HTML elements
-In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
--->
-
-
-<!--
-DOM Interface:
-html tag    ->  interface HTMLHtmlElement : HTMLElement {};
-Javascript  ->  document.getElementsByTagName(name) 
--->
-
-<!--
-document.getElementById(id)
-document.getElementsByTagName(name)
-document.getElementsByClassName(name)
--->
-
-<!--
-element.innerHTML =  new html content
-element.setAttribute(attribute, value)
-element.attribute = new value
--->
-
-<!--
-document.createElement(element)	  Create an HTML element
-document.removeChild(element)	  Remove an HTML element
-document.appendChild(element)	  Add an HTML element
-document.replaceChild(new, old)	  Replace an HTML element 
--->
-
-<!-- 
-document.getElementById(id).onclick = function(){code}	Adding event handler code to an onclick event 
--->
-
-<!-- 
-Animation:
-function myMove() {
-    var elem = document.getElementById("animate"); 
-    var pos = 0;
-    var id = setInterval(frame, 5);
-    function frame() {
-      if (pos == 350) {
-        clearInterval(id);
-      } else {
-        pos++; 
-        elem.style.top = pos + 'px'; 
-        elem.style.left = pos + 'px'; 
-      }
-    }
-  }
--->
-
-<!--
-Tag events:
-<h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
--->
-
-<!-- 
-Event listeners
-element.addEventListener(event, function, useCapture);
-The first parameter is the type of the event (like "click" or "mousedown").
-The second parameter is the function we want to call when the event occurs.
-The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.
-Ex.:
-document.getElementById("myBtn").addEventListener("click", displayDate);
-element.addEventListener("click", function(){ alert("Hello World!"); });
-element.addEventListener("click", myFunction);
-function myFunction() {
-  alert ("Hello World!");
-}
--->
-
-<!--
-Navigation:
-parentNode
-childNodes[nodenumber]
-firstChild
-lastChild
-nextSibling
-previousSibling
-Ex.: 
-document.getElementById("id02").innerHTML = document.getElementById("id01").firstChild; 
--->
-
-<!--
-Two big elements:
-document.body - The body of the document
-document.documentElement - The full document 
--->
-
-<!--
-Get the name of a tag
-document.getElementById("id02").innerHTML = document.getElementById("id01").nodeName;
--->
-
-<!--
-NodeValue
-nodeValue for element nodes is null
-nodeValue for text nodes is the text itself
-nodeValue for attribute nodes is the attribute value
--->
-
-<!--
-TextNode
-var node = document.createTextNode("This is a new paragraph.");
--->
-
-<!--
-Remove child tag
-<div id="div1">
-    <p id="p1">This is a paragraph.</p>
-    <p id="p2">This is another paragraph.</p>
-  </div>
-  
-  <script>
-  var parent = document.getElementById("div1");
-  var child = document.getElementById("p1");
-  parent.removeChild(child);
-  </script>
--->
-
-<!--
-Replace a child tag
-<div id="div1">
-    <p id="p1">This is a paragraph.</p>
-    <p id="p2">This is another paragraph.</p>
-  </div>
-  
-  <script>
-  var para = document.createElement("p");
-  var node = document.createTextNode("This is new.");
-  para.appendChild(node);
-  
-  var parent = document.getElementById("div1");
-  var child = document.getElementById("p1");
-  parent.replaceChild(para, child);
-  </script>
--->
-  
-<!--
-APIs
-HTML Geolocation
-HTML Drag and Drop
-HTML Web Workers
-HTML SSE
--->
-
-<!--
-Creating new tags
-<head>
-...
-<script>document.createElement("myTag")</script>
-</head>
-<body>
-<myTag>My personal tag</myTag>
-</body>
--->
-
-<!--
-WASM
-To source toolchains: source ./emsdk_env.sh --build=Release
-Compiling:
-We have to pass the linker flag -s WASM=1 to emcc (otherwise by default emcc will emit asm.js).
-If we want Emscripten to generate an HTML page that runs our program, in addition to the Wasm binary and JavaScript wrapper, we have to specify an output filename with a .html extension.
-Finally, to actually run the program, we cannot simply open the HTML file in a web browser because cross-origin requests are not supported for the file protocol scheme. We have to actually serve the output files over HTTP. 
--->
