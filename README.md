@@ -1,20 +1,61 @@
 # go-server
+- Imagem Docker
+- Com servidor GO para site *e-commerce*
+- Com estrutura HTML costumizável para ***Food Truck*** ou para **Venda Ambulante de Lanches**
+  - Obs.: Deve-se receber as devidas autorizações de funcionamento 
 
-#### Funcionalidades - estrutura HTML:
+#### Imagem Docker
+- Build da imagem já publicada em [repositório do DockerHub](https://hub.docker.com/r/eduardoleal1981/go-server)
+
+#### servidor GO para site e-commerce
+- Servidor sempre executa comandos pré-definidos e genéricos deste código-fonte.
+- Servidor "servirá" este modelo de aplicativo WEB, que será alterado por você no fluxo de publicação do Gitlab.
+- Para a sua customização, você deve acrescentar imagens / arquivos textuais e vídeos no repositório Gitlab.
+  - Como exemplo de customização e uso, veja https://gitlab.com/eduardoleal1981/no-luar
+
+#### Estrutura HTML customizável:
 - Seção com toda a tela (fundo)
   - id="map"
   - Google Maps no centro
+  - Indicação do local onde se vende a comida, com imagem vetorial
   - 3 menus incorporados (apresentação na superfície superior) com tratamento de cor e de sombreado
 - Menu superior fixo:
-  - Logomarca
-  - "Botão de Menu 1"
-  - "Botão de Menu 2"
-- Menu Lateral esquerdo:
-  - Tópicos e subtópicos
+  - Logomarca "Imagem para Seu Negócio"
+  - "Pedido com entrega"
+  - "Acompanhe a entrega"
+- Menu Lateral fixo: (Exemplo de cardápio para lanches de venda rápida)
+  - Cardápio
+    - Churrasquinho de salsicha, com temperos e farofa
+    - Frutos do mar, com temperos:
+      - Camarão
+      - Casquinha de Siri
+    - Comida Baiana 
+      - Porção de vatapá
+      - Acarajé pequeno
+      - Bebidas
+      - Sucos (poupa da fruta):
+        - caju
+        - maracujá
+        - kiwi
+        - umbu
+        - lima
+        - morango
+      - Refrigerantes
+        - Cerveja
+        - Caipirinha de limão
+        - Caipirinhas (com poupa da fruta):
+        - caju 
+        - maracujá
+        - kiwi
+        - Umbu
+        - lima
+        - morango
 - Menu lateral direito:
-  - Vídeos
+  - Vídeos de culinária (apresentação da higiene e dos produtos usados para se cozinhar este cardápio)
 - Menu inferior:
   - Contato: Nomes e WhatsApp
+
+#### Referências relevantes para aplicativos WEB
 
 ```  
 The W3C DOM standard is separated into 3 different parts:
