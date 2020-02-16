@@ -16,26 +16,26 @@
 - Para a customização, deve-se acrescentar imagens gráficas, arquivos textuais e vídeos em **SEU REPOSITÓRIO** no [GitLab](https://gitlab.com/).
   - Como exemplo de customização e uso, veja [gitlab.com/eduardoleal1981/no-luar](https://gitlab.com/eduardoleal1981/no-luar).
 
-#### Estrutura HTML customizável:
+#### Estrutura HTML:
 - Seção com toda a tela (fundo)
   - id="map"
   - Google Maps no centro
   - Indicação do local onde se vende a comida, com imagem vetorial
   - 3 menus incorporados (apresentação na superfície superior) com tratamento de cor e de sombreado
 - Menu superior fixo:
-  - Logomarca "Imagem para Seu Negócio"
+  - Logomarca "No Luar"
   - "Pedido com entrega"
   - "Acompanhe a entrega"
-- Menu Lateral fixo: (Exemplo de cardápio para lanches de venda rápida)
+- Menu Lateral fixo:
   - Cardápio
-    - Churrasquinho de salsicha, com temperos e farofa
+    - Churrasquinho de calabresa (com temperos e farofa saudáveis)
     - Frutos do mar, com temperos:
       - Camarão
       - Casquinha de Siri
     - Comida Baiana 
       - Porção de vatapá
       - Acarajé pequeno
-      - Bebidas
+    - Bebidas
       - Sucos (poupa da fruta):
         - caju
         - maracujá
@@ -44,9 +44,9 @@
         - lima
         - morango
       - Refrigerantes
-        - Cerveja
-        - Caipirinha de limão
-        - Caipirinhas (com poupa da fruta):
+      - Cervejas
+      - Caipirinha de limão
+      - Caipirinhas (com poupa da fruta):
         - caju 
         - maracujá
         - kiwi
