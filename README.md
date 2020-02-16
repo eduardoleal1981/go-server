@@ -1,15 +1,15 @@
 # go-server
 - O *build* desta imagem está publicado em [repositório do DockerHub](https://hub.docker.com/r/eduardoleal1981/go-server).
-- O código-fonte desta imagem está armazenado no [repositório GitHub](https://github.com/eduardoleal1981/go-server).
+- O código-fonte desta imagem está armazenado em [repositório do GitHub](https://github.com/eduardoleal1981/go-server).
 - Contém servidor *GOLANG* para *site* *e-commerce*
   - Simples método REST para diretórios e arquivos estáticos.
-  - A implementar estrutura de ***rpc*** com ***microservices***.
-- Contém estrutura HTML/CSS/JS costomizável para ***Food Truck*** ou para **Venda Ambulante de Lanches**
-  - Código-fonte segue especificações atualizadas publicadas por [W3C](https://www.w3.org/2019/06/htmlwg-charter.html).
+  - `A implementar estrutura de rpc com microservices.`
+- Contém estrutura HTML/CSS/JS customizável para ***Food Truck*** ou para **Venda Ambulante de Lanches**
+  - Código-fonte segue especificações publicadas por [W3C](https://www.w3.org/2019/06/htmlwg-charter.html).
 
-#### Servidor escrito em GO para site e-commerce
+#### Servidor
 - Servidor apenas executa comandos pré-definidos e genéricos deste código-fonte.
-  - Para alterar comportamento do servidor, deve-se alterar o código-fonte que se encontra no repositório GitHub.  
+  - Para alterar comportamento do servidor, deve-se alterar o código-fonte *GOLANG** que se encontra em [repositório do GitHub](https://github.com/eduardoleal1981/go-server). 
 - Servidor "servirá" este modelo de aplicativo WEB, que deve ser customizado por você no fluxo de publicação do [GitLab](https://gitlab.com/).
 - Para a customização, deve-se acrescentar imagens gráficas, arquivos textuais e vídeos em **SEU REPOSITÓRIO** no [GitLab](https://gitlab.com/).
   - Como exemplo de customização e uso, veja [gitlab.com/eduardoleal1981/no-luar](https://gitlab.com/eduardoleal1981/no-luar).
