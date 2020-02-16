@@ -6,11 +6,13 @@
   - `A implementar estrutura de rpc com microservices.`
 - Contém estrutura HTML/CSS/JS customizável para ***Food Truck*** ou para **Venda Ambulante de Lanches**
   - Código-fonte segue especificações publicadas por [W3C](https://www.w3.org/2019/06/htmlwg-charter.html).
+- As estruturas indicadas acima devem ser usadas na customização implementada em SEU REPOSITÓRIO GITLAB (fluxo de ***build*** final).
+- Depois do *BUILD* do aplicativo *WEB*, deve-se configurar a publicação final com solução ***DEVOPS*** de ***Cloud***.
 
 #### Servidor
 - Servidor apenas executa comandos pré-definidos e genéricos deste código-fonte.
   - Para alterar comportamento do servidor, deve-se alterar o código-fonte *GOLANG* que se encontra em [repositório do GitHub](https://github.com/eduardoleal1981/go-server). 
-- Servidor "servirá" este modelo de aplicativo WEB, que deve ser customizado por você no fluxo de publicação do [GitLab](https://gitlab.com/).
+- Servidor "**SERVE**" modelo de aplicativo WEB que deve ser customizado por você, em **SEU REPOSITÓRIO** no [GitLab](https://gitlab.com/).
 - Para a customização, deve-se acrescentar imagens gráficas, arquivos textuais e vídeos em **SEU REPOSITÓRIO** no [GitLab](https://gitlab.com/).
   - Como exemplo de customização e uso, veja [gitlab.com/eduardoleal1981/no-luar](https://gitlab.com/eduardoleal1981/no-luar).
 
