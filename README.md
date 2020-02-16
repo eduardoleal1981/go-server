@@ -1,17 +1,19 @@
 # go-server
-- Imagem Docker
-- Com servidor GO para site *e-commerce*
+- Imagem *dockerizada*
+- Com servidor *GOLANG* para *site* *e-commerce*
+  - Simples método REST para diretórios e arquivos estáticos.
+  - A implementar estrutura de ***rpc*** com ***microservices***.
 - Com estrutura HTML costumizável para ***Food Truck*** ou para **Venda Ambulante de Lanches**
-  - Obs.: Deve-se receber as devidas autorizações de funcionamento 
+  - Código-fonte segue especificações atualizadas publicadas por [W3C](https://www.w3.org/2019/06/htmlwg-charter.html).
 
 #### Imagem Docker
-- Build da imagem já publicada em [repositório do DockerHub](https://hub.docker.com/r/eduardoleal1981/go-server)
+- O *build* desta imagem está publicado em [repositório do DockerHub](https://hub.docker.com/r/eduardoleal1981/go-server).
 
-#### servidor GO para site e-commerce
-- Servidor sempre executa comandos pré-definidos e genéricos deste código-fonte.
-- Servidor "servirá" este modelo de aplicativo WEB, que será alterado por você no fluxo de publicação do Gitlab.
-- Para a sua customização, você deve acrescentar imagens / arquivos textuais e vídeos no repositório Gitlab.
-  - Como exemplo de customização e uso, veja https://gitlab.com/eduardoleal1981/no-luar
+#### Servidor escrito em GO para site e-commerce
+- Servidor apenas executa comandos pré-definidos e genéricos deste código-fonte.
+- Servidor "servirá" este modelo de aplicativo WEB, que deve ser customizado por você no fluxo de publicação do [GitLab](https://gitlab.com/).
+- Para a customização, deve-se acrescentar imagens gráficas, arquivos textuais e vídeos em **SEU REPOSITÓRIO** no [GitLab](https://gitlab.com/).
+  - Como exemplo de customização e uso, veja [gitlab.com/eduardoleal1981/no-luar](https://gitlab.com/eduardoleal1981/no-luar).
 
 #### Estrutura HTML customizável:
 - Seção com toda a tela (fundo)
