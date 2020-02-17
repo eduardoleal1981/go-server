@@ -22,17 +22,17 @@
   - Google Maps no centro
   - Indicação do local onde se vende a comida, com imagem vetorial
   - 3 menus incorporados (apresentação na superfície superior) com tratamento de cor e de sombreado
-- Menu superior fixo:
-  - Logomarca "No Luar"
+- Menu superior:
+  - Logomarca
   - "Pedido com entrega"
   - "Acompanhe a entrega"
-- Menu Lateral fixo:
+- Menu Lateral esquerdo:
   - Cardápio
     - Churrasquinho de calabresa
     - Frutos do mar, com temperos:
       - Camarão
       - Casquinha de Siri
-    - Comida Baiana 
+    - Culinária Baiana:
       - Porção de Vatapá
       - Porção de Acarajé
     - Sucos (poupa da fruta):
@@ -49,7 +49,7 @@
       - caju 
       - maracujá
       - kiwi
-      - Umbu
+      - umbu
       - lima
       - morango
 - Menu lateral direito:
