@@ -28,31 +28,30 @@
   - "Acompanhe a entrega"
 - Menu Lateral fixo:
   - Cardápio
-    - Churrasquinho de calabresa (com temperos e farofa saudáveis)
+    - Churrasquinho de calabresa
     - Frutos do mar, com temperos:
       - Camarão
       - Casquinha de Siri
     - Comida Baiana 
-      - Porção de vatapá
-      - Acarajé pequeno
-    - Bebidas
-      - Sucos (poupa da fruta):
-        - caju
-        - maracujá
-        - kiwi
-        - umbu
-        - lima
-        - morango
-      - Refrigerantes
-      - Cervejas
-      - Caipirinha de limão
-      - Caipirinhas (com poupa da fruta):
-        - caju 
-        - maracujá
-        - kiwi
-        - Umbu
-        - lima
-        - morango
+      - Porção de Vatapá
+      - Porção de Acarajé
+    - Sucos (poupa da fruta):
+      - caju
+      - maracujá
+      - kiwi
+      - umbu
+      - lima
+      - morango
+    - Refrigerantes
+    - Cervejas
+    - Caipirinha de limão
+    - Caipirinhas (com poupa da fruta):
+      - caju 
+      - maracujá
+      - kiwi
+      - Umbu
+      - lima
+      - morango
 - Menu lateral direito:
   - Vídeos de culinária (apresentação da higiene e dos produtos usados para se cozinhar este cardápio)
 - Menu inferior:
