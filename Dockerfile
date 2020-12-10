@@ -1,5 +1,5 @@
 FROM golang:1.14-rc
-COPY server/go/src/server-app /go/src/server-app
+COPY server-app /go/src/
 RUN go install server-app
 
 FROM alpine:3.11
