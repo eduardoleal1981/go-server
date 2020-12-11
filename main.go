@@ -12,7 +12,7 @@ import (
 
 func main() {
 	var tHandler handler.THandler
-	err := http.ListenAndServe(":8080", tHandler)
+	err := http.ListenAndServe(":80", tHandler)
 	// TODO HTTPS ACCESS: log.Fatal(srv.ListenAndServeTLS(certFile, keyFile string))
 	if err != nil {
 		log.Fatal(err)
