@@ -20,6 +20,17 @@
     - [gitlab.com/eduardoleal1981/na-porteira](https://gitlab.com/eduardoleal1981/na-porteira)
     - [gitlab.com/eduardoleal1981/tcarvi](https://gitlab.com/eduardoleal1981/tcarvi)
 
+# Install:
+- sudo apt install golang
+- emacs ~/.bashrc
+  - add line: `export GOBIN=/yourGoBinDirectory`
+  - add line: `export PATH=$PATH:$GOBIN`
+  - add line: `export GOPATH=/yourGoPathDirectory`
+- go install github.com/eduardoleal1981/go-server/server-app
+
+# Exec:
+- server-app
+
 #### Estrutura HTML:
 - Seção com toda a tela (fundo)
   - id="map"
