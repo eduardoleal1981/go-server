@@ -1,8 +1,10 @@
 FROM golang:1.14-rc
-RUN go install github.com/eduardoleal1981/go-server/server-app
+WORKDIR /libs/go
+RUN export GOPATH=/libs/go
+RUN go get github.com/eduardoleal1981/go-server
 
 FROM alpine:3.11
-COPY --from=0 /go/bin/server-app .
+COPY --from=0 /libs/go/bin/server-app .
 COPY img /img
 COPY docs /docs/pdf
 COPY js /js
