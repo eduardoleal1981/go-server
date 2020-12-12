@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/eduardoleal1981/go-server/server-app/handler"
+	"github.com/eduardoleal1981/go-server/handler"
 )
 
 func main() {
