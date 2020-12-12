@@ -61,7 +61,7 @@ func tServeAPI(w http.ResponseWriter, r *http.Request) {
 	//Serve Files
 	fmt.Println("*** ***")
 	fmt.Println("tServeAPI")
-	fmt.Println("Opção não usada: public/" + r.Host + r.URL.Path)
+	fmt.Println("Opção não usada: public/" + tTrimUrlHost(r.Host) + r.URL.Path)
 	fmt.Println("Opção não usada: public/" + r.URL.Path)
 	fmt.Println("Opção usada: public" + r.URL.Path)
 	http.ServeFile(w, r, "public"+r.URL.Path)
@@ -78,10 +78,10 @@ func tServeJs(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("key-Code", "00000000001")
 	// fmt.Println("*** ***")
 	fmt.Println("tServeJs")
-	fmt.Println("Opção não usada: public/" + r.Host + r.URL.Path)
-	fmt.Println("Opção     usada: public/" + r.URL.Path)
+	fmt.Println("Opção     usada: public/" + tTrimUrlHost(r.Host) + r.URL.Path)
+	fmt.Println("Opção não usada: public/" + r.URL.Path)
 	fmt.Println("Opção não usada: public" + r.URL.Path)
-	http.ServeFile(w, r, "public/"+r.URL.Path)
+	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+r.URL.Path)
 }
 
 func tServeLayout(w http.ResponseWriter, r *http.Request) {
@@ -95,7 +95,7 @@ func tServeLayout(w http.ResponseWriter, r *http.Request) {
 	//Serve Files
 	fmt.Println("*** ***")
 	fmt.Println("tServeLayout")
-	fmt.Println("Opção não usada: public/" + r.Host + r.URL.Path)
+	fmt.Println("Opção não usada: public/" + tTrimUrlHost(r.Host) + r.URL.Path)
 	fmt.Println("Opção não usada: public/" + r.URL.Path)
 	fmt.Println("Opção     usada: public" + r.URL.Path)
 	http.ServeFile(w, r, "public"+r.URL.Path)
@@ -112,10 +112,10 @@ func tServeCss(w http.ResponseWriter, r *http.Request) {
 	//Serve Files
 	fmt.Println("*** ***")
 	fmt.Println("tServeCss")
-	fmt.Println("Opção     usada: public/" + r.Host + r.URL.Path)
+	fmt.Println("Opção     usada: public/" + tTrimUrlHost(r.Host) + r.URL.Path)
 	fmt.Println("Opção não usada: public/" + r.URL.Path)
 	fmt.Println("Opção não usada: public" + r.URL.Path)
-	http.ServeFile(w, r, "public/"+r.Host+r.URL.Path)
+	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+r.URL.Path)
 }
 
 func tServeSvg(w http.ResponseWriter, r *http.Request) {
@@ -148,10 +148,10 @@ func tServeHtml(w http.ResponseWriter, r *http.Request) {
 	//Serve File
 	fmt.Println("*** ***")
 	fmt.Println("tServeHtml")
-	fmt.Println("Opção     usada: public/" + r.Host + "/index.html")
+	fmt.Println("Opção     usada: public/" + tTrimUrlHost(r.Host) + "/index.html")
 	fmt.Println("Opção não usada: public/" + "/index.html")
 	fmt.Println("Opção não usada: public" + "/index.html")
-	http.ServeFile(w, r, "public/"+r.Host+"/index.html")
+	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+"/index.html")
 }
 
 func tServeIco(w http.ResponseWriter, r *http.Request) {
@@ -187,6 +187,13 @@ func tServePdf(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("key-Code", "00000000001")
 	//Serve Files
 	http.ServeFile(w, r, "public/docs/"+r.URL.Path)
+}
+
+func tTrimUrlHost(host string) string {
+	var name = strings.TrimSuffix(host, ":8080")
+	name = strings.TrimSuffix(name, ".com.br")
+	name = strings.TrimSuffix(name, ".com")
+	return name
 }
 
 // TODO: func database() string
