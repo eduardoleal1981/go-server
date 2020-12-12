@@ -8,4 +8,4 @@ FROM alpine:3.12
 COPY --from=0 /go/bin/go-server .
 COPY public .
 EXPOSE 8080
-CMD ["go-server"]
+CMD ["./go-server"]
