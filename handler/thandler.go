@@ -147,6 +147,10 @@ func tServeHtml(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("key-Code", "00000000001")
 	//Serve File
 	fmt.Println("*** ***")
+	fmt.Println("Requisição de RemoteAddr = " + r.RemoteAddr)
+	fmt.Println("Requisição com RequestURI = " + r.RequestURI)
+	fmt.Println("Dados da request:" + time.Now().Format(time.UnixDate))
+	fmt.Println("*** ***")
 	fmt.Println("tServeHtml")
 	fmt.Println("Opção     usada: public/" + tTrimUrlHost(r.Host) + "/index.html")
 	fmt.Println("Opção não usada: public/" + "/index.html")
