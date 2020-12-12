@@ -32,17 +32,9 @@
   - -p [host port]:[container port]
   - A porta do container é a mesma publicada/escutada pelo código do servidor
 
-
-
-- sudo apt install golang
-- emacs ~/.bashrc
-  - add line: `export GOBIN=/yourGoBinDirectory`
-  - add line: `export PATH=$PATH:$GOBIN`
-  - add line: `export GOPATH=/yourGoPathDirectory`
-- go install github.com/eduardoleal1981/go-server
-
-# Exec:
-- server-app
+# Visualização local da template servida por go-server:
+  - Tanto para execução em container como fora do container
+    - No *browser*, acesse localhost:8080
 
 #### Estrutura HTML:
 - Seção com toda a tela (fundo)
