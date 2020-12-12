@@ -13,6 +13,22 @@ type THandler int
 
 func (tHandler THandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
+	// Identificação de padrões nas requisições
+	// Padrão errado não gerará dado: apenas retornará para fluxo de main.go com erro a ser apresentado.
+
+	// Segurança:
+	// tratar de r.Host e de r.URL.Path para que estes dados apenas possam ser "strings"
+	// urlPath = verifySecurityIssues(r.URL.Path)
+	// urlHost = verifySecurityIssues(r.Host)
+	// Implementação a ser definida por perito em tratamento de dados.
+	// Solução escolhida não será mostrada neste repositório público.
+	// No caso de identificação de falha neste quesito de segurança, retornar dados do solicitante, incluindo:
+	//    IP da requisição,
+	//    Porta de Comunicação do computador da requisição e
+	//    Horário da Requisição;
+	//    com mensagem de alerta sobre uso criminoso da rede mundial de computadores.
+	// Fluxo seguinte não precisa de tratamento de segurança pois os dados a serem processados já foram validados.
+
 	if strings.HasPrefix(r.URL.Path, "/js/api") {
 		fmt.Println("Debug: tServeAPI")
 		tServeAPI(w, r)
