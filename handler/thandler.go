@@ -26,10 +26,12 @@ func (tHandler THandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Debug: tServeSvg")
 		tServeSvg(w, r)
 	} else if strings.HasSuffix(r.URL.Path, ".html") {
-		fmt.Println("Debug: tServeHtml")
+		fmt.Println("Debug: tServeHtml .html")
+		fmt.Println(r.URL.Path)
 		tServeHtml(w, r)
 	} else if strings.HasSuffix(r.URL.Path, "/") {
-		fmt.Println("Debug: tServeHtml")
+		fmt.Println("Debug: tServeHtml /")
+		fmt.Println(r.URL.Path)
 		tServeHtml(w, r)
 	} else if strings.HasSuffix(r.URL.Path, ".ico") {
 		fmt.Println("Debug: tServeIco")
