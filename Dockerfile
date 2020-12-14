@@ -6,6 +6,6 @@ RUN go install github.com/eduardoleal1981/go-server
 
 FROM alpine:3.12
 COPY --from=0 /go/bin/go-server .
-COPY public .
+COPY public /public
 EXPOSE 8080
 CMD ["./go-server"]
