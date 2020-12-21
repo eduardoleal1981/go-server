@@ -31,11 +31,11 @@ func (tHandler THandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	logs(r)
 
-	if strings.HasPrefix(r.URL.Path, "/js/api") {
+	if strings.HasPrefix(r.URL.Path, "/api") {
 		tServeAPI(w, r)
 	} else if strings.HasSuffix(r.URL.Path, ".js") {
 		tServeJs(w, r)
-	} else if strings.HasPrefix(r.URL.Path, "/css/layout") {
+	} else if strings.HasPrefix(r.URL.Path, "/layout") {
 		tServeLayout(w, r)
 	} else if strings.HasSuffix(r.URL.Path, ".css") {
 		tServeCss(w, r)
@@ -71,7 +71,7 @@ func tServeAPI(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve Files
-	http.ServeFile(w, r, "public/js"+r.URL.Path)
+	http.ServeFile(w, r, "public"+r.URL.Path)
 }
 
 func tServeJs(w http.ResponseWriter, r *http.Request) {
@@ -94,7 +94,7 @@ func tServeLayout(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve Files
-	http.ServeFile(w, r, "public/css"+r.URL.Path)
+	http.ServeFile(w, r, "public"+r.URL.Path)
 }
 
 func tServeCss(w http.ResponseWriter, r *http.Request) {
@@ -200,12 +200,12 @@ func tTrimUrlHost(host string) string {
 }
 
 func logs(r *http.Request) {
-	fmt.Println("*** ***/nRequisição com RemoteAddr = " + r.RemoteAddr)
+	fmt.Println("*** ***\n*** ***\nRequisição com RemoteAddr = " + r.RemoteAddr)
 	fmt.Println("Requisição com RequestURI = " + r.RequestURI)
 	fmt.Println("r.Host = " + r.Host)
 	fmt.Println("tTrimUrlHost(r.Host) = " + tTrimUrlHost(r.Host))
 	fmt.Println("r.URL.Path = " + r.URL.Path)
-	fmt.Println("Horário da request:" + time.Now().Format(time.UnixDate) + "*** ***/n")
+	fmt.Println("Horário da request:" + time.Now().Format(time.UnixDate) + "*** ***\n")
 }
 
 // TODO: func database() string
