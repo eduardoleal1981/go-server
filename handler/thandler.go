@@ -200,12 +200,14 @@ func tTrimUrlHost(host string) string {
 }
 
 func logs(r *http.Request) {
-	fmt.Println("*** ***\n*** ***\nRequisição com RemoteAddr = " + r.RemoteAddr)
+	fmt.Println("*** *** *** ***")
+	fmt.Println("Requisição com RemoteAddr = " + r.RemoteAddr)
 	fmt.Println("Requisição com RequestURI = " + r.RequestURI)
 	fmt.Println("r.Host = " + r.Host)
 	fmt.Println("tTrimUrlHost(r.Host) = " + tTrimUrlHost(r.Host))
 	fmt.Println("r.URL.Path = " + r.URL.Path)
-	fmt.Println("Horário da request:" + time.Now().Format(time.UnixDate) + "*** ***\n")
+	fmt.Println("Horário da request:" + time.Now().Format(time.UnixDate))
+	fmt.Println("*** *** *** ***")
 }
 
 // TODO: func database() string
