@@ -29,45 +29,41 @@ func (tHandler THandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	//    com mensagem de alerta sobre uso criminoso da rede mundial de computadores.
 	// Fluxo seguinte não precisa de tratamento de segurança pois os dados a serem processados já foram validados.
 
+	logs(r)
+
 	if strings.HasPrefix(r.URL.Path, "/js/api") {
-		fmt.Println("Debug: tServeAPI")
 		tServeAPI(w, r)
 	} else if strings.HasSuffix(r.URL.Path, ".js") {
-		fmt.Println("Debug: tServeJs")
 		tServeJs(w, r)
-	} else if strings.HasPrefix(r.URL.Path, "/css/normalize") {
-		fmt.Println("Debug: tServeLayout")
+	} else if strings.HasPrefix(r.URL.Path, "/css/layout") {
 		tServeLayout(w, r)
 	} else if strings.HasSuffix(r.URL.Path, ".css") {
-		fmt.Println("Debug: tServeCss")
 		tServeCss(w, r)
 	} else if strings.HasSuffix(r.URL.Path, ".svg") {
-		fmt.Println("Debug: tServeSvg")
 		tServeSvg(w, r)
 	} else if strings.HasSuffix(r.URL.Path, ".html") {
-		fmt.Println("Debug: tServeHtml .html")
 		tServeHtml(w, r)
 	} else if strings.HasSuffix(r.URL.Path, "/") {
-		fmt.Println("Debug: tServeHtml /")
 		tServeHtml(w, r)
 	} else if strings.HasSuffix(r.URL.Path, ".ico") {
-		fmt.Println("Debug: tServeIco")
 		tServeIco(w, r)
 	} else if strings.HasSuffix(r.URL.Path, ".jpeg") {
-		fmt.Println("Debug: tServeJpeg")
 		tServeJpeg(w, r)
 	} else if strings.HasSuffix(r.URL.Path, ".png") {
-		fmt.Println("Debug: tServePng")
 		tServePng(w, r)
 	} else if strings.HasSuffix(r.URL.Path, ".pdf") {
-		fmt.Println("Debug: tServePdf")
 		tServePdf(w, r)
+	} else if strings.HasSuffix(r.URL.Path, ".webp") {
+		tServeWebp(w, r)
+	} else if strings.HasSuffix(r.URL.Path, ".pptx") {
+		tServePptx(w, r)
+	} else if strings.HasSuffix(r.URL.Path, "/v") {
+		fmt.Fprint(w, "Server 1.0")
 	}
 }
 
 func tServeAPI(w http.ResponseWriter, r *http.Request) {
 	// Connection
-	w.Header().Set("Transfer-Encoding", "gzip")
 	w.Header().Set("Cache-Control", "no-cache")
 	// Message
 	w.Header().Set("Content-Type", "text/javascript; charset=utf-8")
@@ -75,29 +71,18 @@ func tServeAPI(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve Files
-	fmt.Println("*** ***")
-	fmt.Println("tServeAPI")
-	fmt.Println("Opção não usada: public/" + tTrimUrlHost(r.Host) + r.URL.Path)
-	fmt.Println("Opção não usada: public/" + r.URL.Path)
-	fmt.Println("Opção usada: public" + r.URL.Path)
-	http.ServeFile(w, r, "public"+r.URL.Path)
+	http.ServeFile(w, r, "public/js"+r.URL.Path)
 }
 
 func tServeJs(w http.ResponseWriter, r *http.Request) {
 	// Connection
-	w.Header().Set("Transfer-Encoding", "gzip")
 	w.Header().Set("Cache-Control", "no-cache")
 	// Message
 	w.Header().Set("Content-Type", "text/javascript; charset=utf-8")
 	w.Header().Set("Content-Language", "pt-br")
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
-	// fmt.Println("*** ***")
-	fmt.Println("tServeJs")
-	fmt.Println("Opção     usada: public/" + tTrimUrlHost(r.Host) + r.URL.Path)
-	fmt.Println("Opção não usada: public/" + r.URL.Path)
-	fmt.Println("Opção não usada: public" + r.URL.Path)
-	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+r.URL.Path)
+	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+"/js"+r.URL.Path)
 }
 
 func tServeLayout(w http.ResponseWriter, r *http.Request) {
@@ -109,12 +94,7 @@ func tServeLayout(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve Files
-	fmt.Println("*** ***")
-	fmt.Println("tServeLayout")
-	fmt.Println("Opção não usada: public/" + tTrimUrlHost(r.Host) + r.URL.Path)
-	fmt.Println("Opção não usada: public/" + r.URL.Path)
-	fmt.Println("Opção     usada: public" + r.URL.Path)
-	http.ServeFile(w, r, "public"+r.URL.Path)
+	http.ServeFile(w, r, "public/css"+r.URL.Path)
 }
 
 func tServeCss(w http.ResponseWriter, r *http.Request) {
@@ -126,12 +106,7 @@ func tServeCss(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve Files
-	fmt.Println("*** ***")
-	fmt.Println("tServeCss")
-	fmt.Println("Opção     usada: public/" + tTrimUrlHost(r.Host) + r.URL.Path)
-	fmt.Println("Opção não usada: public/" + r.URL.Path)
-	fmt.Println("Opção não usada: public" + r.URL.Path)
-	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+r.URL.Path)
+	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+"/css"+r.URL.Path)
 }
 
 func tServeSvg(w http.ResponseWriter, r *http.Request) {
@@ -144,7 +119,7 @@ func tServeSvg(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve File
-	http.ServeFile(w, r, "public/"+r.URL.Path)
+	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+"/img/svg"+r.URL.Path)
 }
 
 func tServeHtml(w http.ResponseWriter, r *http.Request) {
@@ -153,7 +128,6 @@ func tServeHtml(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("X-Firefox-Spdy", "h2")     //Chrome OK
 	w.Header().Set("Protocol", "HTTP/2.0")     //Chrome OK
 	// Connection
-	w.Header().Set("Transfer-Encoding", "gzip") //Chrome OK
 	w.Header().Set("Cache-Control", "no-cache") //Chrome OK
 	w.Header().Set("Date", time.Now().Format(time.UnixDate))
 	// Message
@@ -162,15 +136,6 @@ func tServeHtml(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve File
-	fmt.Println("*** ***")
-	fmt.Println("Requisição de RemoteAddr = " + r.RemoteAddr)
-	fmt.Println("Requisição com RequestURI = " + r.RequestURI)
-	fmt.Println("Dados da request:" + time.Now().Format(time.UnixDate))
-	fmt.Println("*** ***")
-	fmt.Println("tServeHtml")
-	fmt.Println("Opção     usada: public/" + tTrimUrlHost(r.Host) + "/index.html")
-	fmt.Println("Opção não usada: public/" + "/index.html")
-	fmt.Println("Opção não usada: public" + "/index.html")
 	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+"/index.html")
 }
 
@@ -179,7 +144,7 @@ func tServeIco(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "image/x-icon")
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
-	http.ServeFile(w, r, "public/img/"+r.URL.Path)
+	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+"/img/ico"+r.URL.Path)
 }
 
 func tServeJpeg(w http.ResponseWriter, r *http.Request) {
@@ -188,7 +153,7 @@ func tServeJpeg(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve Files
-	http.ServeFile(w, r, "public/"+r.URL.Path)
+	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+"/img/jpeg"+r.URL.Path)
 }
 
 func tServePng(w http.ResponseWriter, r *http.Request) {
@@ -197,7 +162,16 @@ func tServePng(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve Files
-	http.ServeFile(w, r, "public/"+r.URL.Path)
+	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+"/img/png"+r.URL.Path)
+}
+
+func tServeWebp(w http.ResponseWriter, r *http.Request) {
+	// Message
+	w.Header().Set("Content-Type", "image/webp")
+	// To be handled by webapp
+	w.Header().Set("key-Code", "00000000001")
+	//Serve Files
+	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+"/img/webp"+r.URL.Path)
 }
 
 func tServePdf(w http.ResponseWriter, r *http.Request) {
@@ -206,7 +180,16 @@ func tServePdf(w http.ResponseWriter, r *http.Request) {
 	// To be handled by webapp
 	w.Header().Set("key-Code", "00000000001")
 	//Serve Files
-	http.ServeFile(w, r, "public/docs/"+r.URL.Path)
+	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+"/docs/pdf"+r.URL.Path)
+}
+
+func tServePptx(w http.ResponseWriter, r *http.Request) {
+	// Message
+	w.Header().Set("Content-Type", "application/vnd.mspowerpoint")
+	// To be handled by webapp
+	w.Header().Set("key-Code", "00000000001")
+	//Serve Files
+	http.ServeFile(w, r, "public/"+tTrimUrlHost(r.Host)+"/docs/ppt"+r.URL.Path)
 }
 
 func tTrimUrlHost(host string) string {
@@ -214,6 +197,15 @@ func tTrimUrlHost(host string) string {
 	name = strings.TrimSuffix(name, ".com.br")
 	name = strings.TrimSuffix(name, ".com")
 	return name
+}
+
+func logs(r *http.Request) {
+	fmt.Println("*** ***/nRequisição com RemoteAddr = " + r.RemoteAddr)
+	fmt.Println("Requisição com RequestURI = " + r.RequestURI)
+	fmt.Println("r.Host = " + r.Host)
+	fmt.Println("tTrimUrlHost(r.Host) = " + tTrimUrlHost(r.Host))
+	fmt.Println("r.URL.Path = " + r.URL.Path)
+	fmt.Println("Horário da request:" + time.Now().Format(time.UnixDate) + "*** ***/n")
 }
 
 // TODO: func database() string

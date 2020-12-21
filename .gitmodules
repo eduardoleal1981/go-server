@@ -1,0 +1,9 @@
+[submodule "naporteira"]
+	path = naporteira
+	url = https://gitlab.com/tcarvi/naporteira
+[submodule "nofrete"]
+	path = nofrete
+	url = https://gitlab.com/tcarvi/nofrete
+[submodule "noluar"]
+	path = noluar
+	url = https://gitlab.com/tcarvi/noluar
